@@ -1,0 +1,1248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Shubham & Shruti Wedding Card</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400;1,600&display=swap" rel="stylesheet"/>
+
+<script>
+/* ============================================================
+   ✏️  EDIT ALL YOUR WEDDING DETAILS HERE
+   ============================================================ */
+const CONFIG = {
+
+  /* --- COUPLE --- */
+  groomName:        "Shubham Agrawal",
+  brideName:        "Shruti Choudhary",
+  hashtag:          "#ShubhShruti",
+  weddingTagline:   "शुभ विवाह",
+
+  /* --- GROOM'S FAMILY --- */
+  groomFatherName:  "Dinesh Kumar Agrawal",
+  groomMotherName:  "Renu Agrawal",
+  groomFamily:      "Agrawal Parivaar",
+
+  /* --- BRIDE'S FAMILY --- */
+  brideFatherName:  "Ashok Choudhary",
+  brideMotherName:  "Anita Choudhary",
+  brideFamily:      "Choudhary Parivaar",
+
+  /* --- VENUES --- */
+  preweddingVenue:  "Patel Chowk, Krishna Colony, Begusarai, Bihar",
+  mainVenue:        "Hotel Yuvraj Deluxe",
+  mainVenueAddress: "Barauni Zero Mile, Barauni–Purnea Highway, Begusarai, Bihar 851115",
+  preweddingMapsURL:"https://maps.google.com/?q=Patel+Chowk+Krishna+Colony+Begusarai+Bihar",
+  mainVenueMapsURL: "https://maps.google.com/?q=Hotel+Yuvraj+Deluxe+Barauni+Zero+Mile+Begusarai+Bihar+851115",
+
+  /* --- RSVP CONTACTS --- */
+  rsvp1Name:        "Diksha Agrawal (Groom's Sister)",
+  rsvp1Phone:       "+91 77599 19447",
+  rsvp2Name:        "Dinesh Kumar Agrawal (Groom's Father)",
+  rsvp2Phone:       "+91 94728 06600",
+
+  /* --- EVENTS (edit name, date, time, description, dress) --- */
+  events: [
+    {
+      date:     "5th May 2026 · Tuesday",
+      dayHindi: "पहला दिन",
+      venue:    "Patel Chowk, Krishna Colony, Begusarai",
+      bgColor: "linear-gradient(135deg,#c07010,#e8a020,#f5c842)",
+      functions: [
+        {
+          name:    "Haldaat",
+          icon: "https://m.media-amazon.com/images/I/41Ey6d2lbSL.jpg",
+          iconType: "image",
+          time:    "10:00 AM",
+          desc:    "The auspicious Ganesh Puja marking the sacred beginning of all wedding festivities. Ganpati Bappa is invoked first — as per Marwari tradition, no shubh karya begins without His blessings. ॐ गं गणपतये नमः!",
+          dress:   ["Indian Traditional Wear","Ethnic"],
+          colorTheme: ["Any of your choice"],
+          colorDots: []
+        }
+      ]
+    },
+    {
+      date:     "6th May 2026 · Wednesday",
+      dayHindi: "दादी मंगल पाठ",
+      venue:    "Patel Chowk, Krishna Colony, Begusarai",
+      bgColor:  "linear-gradient(135deg,#2c0a0a,#5a1010,#8b1a1a)",
+      functions: [
+        {
+          name:    "Dadi Mangal Path",
+          icon:    "🔱",
+          time:    "1:00 PM",
+          desc:    "A sacred path in honour of our Kul Devi — Shri Rani Sati Dadi Maa of Jhunjhunu, Rajasthan. She is the embodiment of courage, devotion and Nari Shakti. We seek Her eternal blessings for the couple's new journey.",
+          dress:   ["Ladies — Red / Orange Saree or Dress", "Gents — Red / orange Kurta"],
+          colorTheme: "shades of Red · Orange",
+          colorDots: [,"#e74c3c","#c0392b","#ff7020","#e67e22"]
+        }
+      ]
+    },
+    {
+      date:     "7th May 2026 · Thursday",
+      dayHindi: "मेहंदी दिन",
+      venue:    "Patel Chowk, Krishna Colony, Begusarai",
+      bgColor:  "linear-gradient(135deg,#0a3a0a,#1e6e1e,#27ae60)",
+      functions: [
+        {
+          name:    "Mehendi",
+          icon:    "🌿",
+          time:    "10:00 AM",
+          desc:    "Henna-adorned hands, Rajasthani folk geet and the fragrance of marigolds. In Marwari tradition, even the groom applies mehndi — a sign of love and good fortune! गीत, रंग, खुशी!",
+          dress:   ["ethnic wear"],
+          colorTheme: "Hues of Green 💚",
+          colorDots: ["#d4f5d4","#90e490","#27ae60","#1e8449","#145a32"]
+        }
+      ]
+    },
+    {
+      date:     "8th May 2026 · Friday",
+      dayHindi: "तीन उत्सव",
+      venue:    "Hotel Yuvraj, Begusarai, Bihar",
+      bgColor:  "linear-gradient(135deg,#2c0060,#5a0090,#7b1fa2)",
+      functions: [
+        {
+          name:    "Bhaat",
+          icon:    "🎁",
+          time:    "2:00 PM",
+          desc:    "The heartwarming ceremony where the groom's mama-mami and maike-wale arrive with love, gifts and blessings. Chunari — the sacred bandhani odhna — is the star of the day!",
+          dress:   ["Chunari Print (Groom's Maternal side)", "Indian Traditional (Others)"],
+          colorTheme: "Chunari Print",
+          colorDots: []
+        },
+        {
+          name:    "Engagement",
+          icon:    "💍",
+          time:    "7:00 PM",
+          desc:    "Shubham & Shruti seal their bond with rings in front of family and loved ones. A night full of love and new beginnings!",
+          dress:   ["Ladies — Indo-Western / Lehenga/ Saree", "Men — Sherwani / Formals"],
+          colorTheme: "",
+          colorDots: []
+        },
+        {
+          name:    "Sangeet",
+          icon:    "🎶",
+          time:    "8:00 PM",
+          desc:    "Geet, naach, tamasha under the stars! Channel your inner performer — it's a night of music, memories and full-on merriment. Dance karo dil khol ke!",
+          dress:   ["Ladies — Indo-Western / Lehenga / Gown", "Men — Sherwani / Blazer / Formals"],
+          colorTheme: "",
+          colorDots: []
+        }
+      ]
+    },
+    {
+      date:     "9th May 2026 · Saturday — The Wedding Day",
+      dayHindi: "विवाह दिवस 🌸",
+      venue:    "Hotel Yuvraj, Begusarai, Bihar",
+      bgColor:  "linear-gradient(135deg,#2c0808,#6e1010,#8b2020)",
+      functions: [
+        {
+          name:    "Haldi",
+          icon:    "🌼",
+          time:    "9:00 AM",
+          desc:    "The golden morning ritual — turmeric, marigolds and mangal geet! In Marwari tradition (Pitthi Dastoor), chandan-haldi paste is applied for the radiant bride & groom. Wear something you don't mind staining!",
+          dress:   ["shades of blue"],
+          colorTheme: "Hues of Blue 💙",
+          colorDots: ["#d0eaff","#85c1e9","#2980b9","#1a5276","#0a2d47"]
+        },
+        {
+          name:    "Varmala & Pheras",
+          icon:    "🌺",
+          time:    "8:00 PM",
+          desc:    "Saat Pheras around the holy fire, witnessed by family, stars and the blessings of Rani Sati Dadi Maa. Shubham & Shruti become one. The most beautiful moment of all! 🙏",
+          dress:   ["Saree / Lehenga", "Gown", "Sherwani / Bandhgala"],
+          colorTheme: "Ethnic Elegance",
+          colorDots: []
+        }
+      ]
+    }
+  ],
+
+  /* --- TRAVEL --- */
+  airportInfo:   "Patna Airport (JAY) — ~120 km, 2.5 hrs | Alt: Gaya Airport ~190 km",
+  trainInfo:     "Barauni Junction (very close to venue!) | Also: Begusarai Railway Station",
+  roadInfo:      "From Patna: ~120 km · 2.5 hrs | From Delhi: ~1100 km via NH-19 / NH-31",
+
+  /* --- CLOSING --- */
+  closingSanskrit: "ॐ सर्वे भवन्तु सुखिनः",
+  closingTranslation: "May all be happy, may all be free from sorrow",
+  closingWish:     "Your presence is our biggest blessing.\nCome, eat well, dance more, bless the couple! 🙏",
+
+  /* --- THEME COLORS (change to customize overall look) --- */
+  primaryRed:   "#8b1a1a",
+  accentGold:   "#c8862a",
+  bgGradient:   "linear-gradient(160deg,#fdf0e0 0%,#f8e0b8 45%,#f0c880 100%)",
+};
+/* ============================================================ */
+</script>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:#f5ede0;display:flex;justify-content:center;align-items:flex-start;min-height:100vh;padding:20px 10px;}
+.cw{font-family:'Cormorant Garamond',serif;color:#3a1a0a;max-width:480px;width:100%;margin:0 auto;}
+.pg{position:relative;overflow:hidden;border-radius:20px;margin-bottom:2px;}
+.bf{position:absolute;inset:10px;border:1.5px solid rgba(184,98,42,0.3);border-radius:12px;pointer-events:none;z-index:2;}
+.page-h{display:none!important;}
+@keyframes sparkleMove {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(40px); }
+}
+/* COVER */
+.pg-cover{min-height:660px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:44px 24px 36px;text-align:center;}
+.pg-cover::before {
+  content:"";
+  position:absolute;
+  inset:0;
+  background: radial-gradient(circle at 50% 30%, rgba(255,215,0,0.25), transparent 60%);
+  z-index:0;
+  animation: bgPulse 4s ease-in-out infinite;
+}
+
+@keyframes bgPulse {
+  0%,100% { opacity:0.6; }
+  50% { opacity:1; }
+}
+.cover-petals{position:absolute;top:0;left:0;width:100%;height:100%;overflow:hidden;pointer-events:none;}
+.petal{position:absolute;animation:pfall linear infinite;opacity:0;}
+@keyframes pfall{0%{transform:translateY(-30px) rotate(0deg);opacity:0.75}100%{transform:translateY(750px) rotate(540deg);opacity:0}}
+.ganesh-wrap{margin-bottom:6px;filter:drop-shadow(0 4px 12px rgba(139,60,10,0.25));animation:flt 3s ease-in-out infinite;position:relative;z-index:1;}
+@keyframes flt{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-7px) scale(1.02)}}
+.swastik-row{display:flex;gap:16px;align-items:center;margin:10px 0;position:relative;z-index:1;}
+.om-text{font-size:12px;color:#8b4513;letter-spacing:4px;opacity:0.75;margin-bottom:4px;position:relative;z-index:1;}
+.cartoon-wrap{position:relative;z-index:1;animation:cflt 3.5s ease-in-out infinite;}
+.cartoon-wrapp{position:relative;z-index:1;}
+@keyframes cflt{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.cn {
+  font-family:'Playfair Display',serif;
+  font-size:40px;
+  line-height:1.1;
+  margin:6px 0;
+  position:relative;
+  z-index:1;
+  animation: nameFade 2s ease-in-out;
+}
+
+/* glow */
+.cn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, rgba(200,134,42,0.25), transparent 70%);
+  z-index: -1;
+  filter: blur(12px);
+}
+
+/* shimmer effect */
+.cn span, .cn {
+  text-shadow:
+    0 0 8px rgba(200,134,42,0.4),
+    0 0 18px rgba(200,134,42,0.3);
+}
+
+@keyframes nameFade {
+  from { opacity:0; transform:translateY(10px);}
+  to { opacity:1; transform:translateY(0);}
+}
+.amp{font-style:italic;}
+.divr {
+  width:100px;
+  height:1.5px;
+  margin:12px auto;
+  position:relative;
+  z-index:1;
+  animation: lineGlow 3s ease-in-out infinite;
+}
+.divr::before {
+  content: "❁";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -10px;
+  color: #c8862a;
+  font-size: 14px;
+}
+@keyframes lineGlow {
+  0%,100% { opacity:0.5; }
+  50% { opacity:1; }
+}
+.htag{font-family:'Playfair Display',serif;font-style:italic;font-size:19px;animation:shim 2.5s ease-in-out infinite alternate;position:relative;z-index:1;}
+@keyframes shim{from{opacity:0.65}to{opacity:1}}
+.dv-info{font-size:14px;line-height:2;margin-top:8px;position:relative;z-index:1;}
+.dv-info strong{display:block;font-size:16px;font-weight:600;}
+.swipe-hint{margin-top:16px;font-size:12px;font-style:italic;animation:pulse 2s ease-in-out infinite;position:relative;z-index:1;}
+@keyframes pulse{0%,100%{opacity:0.5}50%{opacity:1}}
+
+/* INVITE */
+.pg-invite{
+  min-height:520px;
+  padding:44px 28px;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+  background: linear-gradient(160deg,#fffaf0,#fce8c8,#f5d6a0);
+}
+.pg-invite::before {
+  content:"";
+  position:absolute;
+  inset:0;
+  background: radial-gradient(circle at 50% 20%, rgba(200,134,42,0.25), transparent 60%);
+  z-index:0;
+  animation: inviteGlow 5s ease-in-out infinite;
+}
+
+
+@keyframes inviteGlow {
+  0%,100% { opacity:0.6; }
+  50% { opacity:1; }
+}
+.inv-bless{font-style:italic;font-size:13.5px;letter-spacing:0.5px;margin-bottom:14px;line-height:1.7;}
+.inv-fam{font-size:11.5px;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:5px;}
+.nm-big{
+  font-family:'Playfair Display',serif;
+  font-size:38px;
+  margin:6px 0;
+  color:#8b1a1a;
+  text-shadow:
+    0 0 8px rgba(200,134,42,0.3),
+    0 0 16px rgba(200,134,42,0.2);
+  animation: namePop 1.5s ease;
+}
+
+@keyframes namePop {
+  from { transform: scale(0.9); opacity:0;}
+  to { transform: scale(1); opacity:1;}
+}
+.lineage{font-size:12px;line-height:1.8;margin-bottom:4px;}
+.with-t{font-size:20px;font-style:italic;margin:14px 0;}
+.rsvp-box{
+  margin-top:22px;
+  padding:16px;
+  background:rgba(255,255,255,0.4);
+  border-radius:12px;
+  border:1px solid rgba(200,134,42,0.3);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.rsvp-box:hover {
+  transform: translateY(-4px);
+}
+.rsvp-t{font-size:10.5px;letter-spacing:3px;text-transform:uppercase;margin-bottom:8px;}
+.rsvp-c{font-size:13px;line-height:2.1;}
+.rsvp-c a{text-decoration:none;}
+
+/* DATE PAGES */
+.pg-date{padding:24px 18px;text-align:center;}
+.pg-date::before {
+  content:"";
+  position:absolute;
+  inset:0;
+  background: radial-gradient(circle at 50% 20%, rgba(255,215,0,0.2), transparent 65%);
+  z-index:0;
+}
+.date-hdr{padding:16px 20px;border-radius:12px;margin-bottom:14px;}
+.date-label{font-size:11px;letter-spacing:3px;color:rgba(26, 16, 16, 0.75);text-transform:uppercase;margin-bottom:3px;}
+.date-num{font-family:'Playfair Display',serif;font-size:28px;color:rgb(0, 0, 0);font-style:italic;}
+.date-venue-txt{font-size:12px;color:rgba(0, 0, 0, 0.7);margin-top:3px;}
+.ev-card {
+  padding: 22px 18px;   /* ↑ from 18px */
+  margin-bottom: 14px;       /* more spacing */
+  border-radius: 16px;      
+  position:relative;
+  overflow:hidden;
+  text-align:center;
+  border: 1px solid rgba(255,215,0,0.3);
+  transition: all 0.3s ease;
+
+  /* 👇 THIS IS THE MAGIC */
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(8px);
+
+  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+}
+.ev-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+.ev-card::after {
+  content:"";
+  position:absolute;
+  inset:0;
+  background: radial-gradient(circle at 50% 0%, rgba(255,215,0,0.15), transparent 70%);
+  z-index:0;
+}
+.ev-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 6px;
+}
+.ev-name {
+  font-family:'Playfair Display',serif;
+  font-size:26px;
+  font-style:italic;
+  color:white;
+  margin:2px 0 6px;
+  text-shadow: 0 0 6px rgba(0,0,0,0.6);
+  letter-spacing: 1px;
+}
+.ev-time,
+.ev-desc {
+  color: rgba(255,255,255,0.9);
+}
+.luxury-img {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  object-fit: cover;
+  padding: 2px;
+  border: 1.5px solid gold;
+  box-shadow: 
+    0 0 8px rgba(255,215,0,0.6),
+    0 0 16px rgba(255,215,0,0.3);
+}
+.ev-time{font-size:13px;color:rgba(255,255,255,0.85);margin-bottom:8px;}
+.ev-desc{font-size:12.5px;color:rgba(255,255,255,0.78);font-style:italic;line-height:1.65;margin-bottom:12px;}
+.ev-dress-title{font-size:10px;letter-spacing:2.5px;color:rgba(255,255,255,0.6);text-transform:uppercase;margin-bottom:6px;}
+.dress-tags{display:flex;flex-wrap:wrap;gap:5px;justify-content:center;margin-bottom:6px;}
+.dtag{display:inline-block;padding:5px 12px;border-radius:14px;font-size:11.5px;border:1px solid rgba(255,255,255,0.35);color:white;background:rgba(255,255,255,0.12);}
+.color-dots{display:flex;justify-content:center;gap:6px;margin:8px 0;}
+.cdot{width:20px;height:20px;border-radius:50%;display:inline-block;border:1.5px solid rgba(255,255,255,0.4);}
+.color-theme-txt{font-size:11.5px;color:rgba(255,255,255,0.7);font-style:italic;margin-top:4px;}
+
+/* chunari pattern */
+.chunari-pat{position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;overflow:hidden;opacity:0.2;}
+
+/* .couple-img {
+  width: 240px;
+  max-width: 90%;
+  border-radius: 20px;
+  object-fit: cover;
+
+  box-shadow: 
+    0 15px 35px rgba(0,0,0,0.3),
+    0 0 25px rgba(200,134,42,0.25);
+
+  animation: coupleFloat 4s ease-in-out infinite;
+  transition: transform 0.4s ease;
+} */
+.couple-img {
+  width: 220px;
+  max-width: 90%;
+  object-fit: cover;
+
+  /* ❌ REMOVE THIS */
+  box-shadow: none;
+  animation: none;
+
+  /* 👇 smooth presence */
+  opacity: 0.95;
+}
+
+/* hover zoom (desktop) */
+.couple-img:hover {
+  transform: scale(1.05);
+}
+
+@keyframes coupleFloat {
+  0%,100% { transform: translateY(0);}
+  50% { transform: translateY(-10px);}
+}
+
+/* smooth floating */
+/* @keyframes floatCouple {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+} */
+
+/* disco */
+.disco-orb{position:absolute;border-radius:50%;pointer-events:none;}
+
+/* ganesh ji */
+.ganesh-wrap {
+  position: relative;
+  margin-bottom: 10px;
+  animation: ganeshEntry 1.5s ease-out;
+}
+
+@keyframes ganeshEntry {
+  0% {
+    opacity: 0;
+    transform: translateY(-40px) scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.ganesh-img {
+  width: 100px;
+  max-width: 90%;
+  object-fit: contain;
+  filter: drop-shadow(0 6px 15px rgba(200,134,42,0.5));
+  animation: floatGanesh 4s ease-in-out infinite;
+}
+
+/* floating animation */
+@keyframes floatGanesh {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+/* soft golden aura */
+.ganesh-wrap::before {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, rgba(255,215,0,0.3), transparent 70%);
+  z-index: -1;
+}
+.dadi-img-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.dadi-img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 50%;
+  padding: 3px;
+  background: white;
+  border: 2px solid #c8862a;
+
+  box-shadow: 
+    0 0 8px rgba(200,134,42,0.5),
+    0 0 16px rgba(200,134,42,0.3);
+
+  animation: dadiGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes dadiGlow {
+  from {
+    box-shadow: 
+      0 0 6px rgba(200,134,42,0.4),
+      0 0 12px rgba(200,134,42,0.2);
+  }
+  to {
+    box-shadow: 
+      0 0 14px rgba(200,134,42,0.8),
+      0 0 22px rgba(200,134,42,0.5);
+  }
+}
+/* DADI special */
+.pg-dadi{padding:36px 22px;text-align:center;}
+.dadi-glow{width:110px;height:110px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-size:48px;animation:dglow 2s ease-in-out infinite alternate;}
+@keyframes dglow{from{box-shadow:0 0 8px rgba(200,134,42,0.3)}to{box-shadow:0 0 30px rgba(200,134,42,0.7)}}
+.dadi-nm{font-family:'Playfair Display',serif;font-size:22px;color:#f5d5a0;margin-bottom:4px;}
+.dadi-sub{font-size:11px;color:rgba(255, 255, 255, 0.6);letter-spacing:2px;margin-bottom:14px;text-transform:uppercase;}
+.dadi-desc{font-size:12.5px;color:rgba(0, 0, 0, 0.82);line-height:1.85;font-style:italic;max-width:340px;margin:0 auto 14px;}
+.dadi-dress{padding:12px 14px;border:1px solid rgba(200,134,42,0.3);border-radius:10px;margin:0 10px 10px;}
+.dadi-dtag{display:inline-block;padding:5px 12px;border-radius:14px;font-size:12px;border:1px solid rgba(245,213,160,0.3);color:#f5d5a0;background:rgba(200,50,10,0.25);margin:3px;}
+
+/* TRAVEL */
+.pg-travel{padding:32px 20px;}
+.tcard{background:white;border-radius:10px;padding:12px 14px;margin-bottom:8px;border-left:4px solid #2471a3;}
+.tmode{font-size:10px;letter-spacing:2px;color:#2471a3;text-transform:uppercase;margin-bottom:3px;font-weight:600;}
+.tdet{font-size:12.5px;color:#3a4a5c;line-height:1.9;}
+.venue-c{border-radius:12px;padding:14px 16px;margin-bottom:10px;color:white;}
+.vc-lbl{font-size:10px;letter-spacing:2px;opacity:0.65;text-transform:uppercase;margin-bottom:3px;}
+.vc-nm{font-family:'Playfair Display',serif;font-size:17px;margin-bottom:2px;}
+.vc-addr{font-size:11.5px;opacity:0.8;line-height:1.5;}
+.map-btn{display:inline-flex;align-items:center;gap:5px;background:white;border-radius:18px;font-size:11.5px;font-weight:600;padding:7px 14px;margin-top:8px;border:none;cursor:pointer;text-decoration:none;}
+
+
+.date-hdr {
+  position: relative;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+.date-hdr::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, rgba(255,255,255,0.2), transparent 70%);
+  z-index: 0;
+}
+.pg-date::after {
+  content: "🌸 ✿ ❀";
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 18px;
+  opacity: 0.18;
+  pointer-events: none;
+}
+.pg-date::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background-image: url('file:///Users/muskanjhunjhunwala/Downloads/images/%E2%80%94Pngtree%E2%80%94best%20mandala%20lineart%20clipart%20for_19295670.png');
+  
+  background-repeat: repeat;
+  /* background-position: center; */
+  background-size: 280px;
+  z-index: 0;              
+
+  opacity: 0.15;
+  filter: sepia(1) saturate(2) hue-rotate(10deg);
+  pointer-events: none;
+}
+.date-hdr * {
+  position: relative;
+  z-index: 1;
+}
+
+.date-hdr .date-num {
+  color: #5a1a00;   /* deep brown */
+  text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+.date-hdr::before {
+  content:"";
+  position:absolute;
+  inset:0;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.4), transparent);
+  border-radius:12px;
+}
+
+/* ONLY page 3 */
+#p2 .ev-name {
+  color:  #5a1a00;
+}
+
+/* #p2 {
+  background: 
+    radial-gradient(circle at 20% 20%, rgba(200,134,42,0.2), transparent 40%),
+    linear-gradient(160deg,#f4e2c2,#e6c88f,#d2a85a);
+} */
+/* #p2::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: radial-gradient(circle at 20% 20%, rgba(200,134,42,0.08), transparent 40%);
+  pointer-events: none;
+} */
+
+
+/* ✨ ANIMATED TEXTURE LAYER */
+
+/* keep content above */
+
+
+/* 🎬 animations */
+@keyframes textureMove {
+  0%   { transform: translate(0,0); }
+  100% { transform: translate(40px,40px); }
+}
+
+@keyframes shimmerMove {
+  0%,100% { opacity:0.4; transform:translateX(0); }
+  50%     { opacity:0.8; transform:translateX(20px); }
+}
+
+
+#p2 * { position: relative; z-index: 1; }
+
+
+
+/* KEEP CONTENT ABOVE */
+/* #p2 * {
+  position: relative;
+  z-index: 1;
+} */
+
+#p2 {
+  box-shadow: inset 0 0 80px rgba(0,0,0,0.05);
+}
+#p2 .ev-time,
+#p2 .ev-desc {
+  color: #6b3e1d;
+
+}
+
+#p2 .date-label {
+  color: rgba(3, 1, 1, 0.7);
+}
+#p2::after {
+  content: "❁ ❁ ❁";
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  opacity: 0.12;
+  font-size: 20px;
+}
+
+
+
+.date-hdr .date-label,
+.date-hdr .date-venue-txt {
+  color: #7a3b00;
+}
+
+/* CLOSING */
+.pg-close::before {
+  content:"";
+  position:absolute;
+  inset:0;
+  background: radial-gradient(circle at 50% 30%, rgba(255,215,0,0.25), transparent 60%);
+  animation: bgPulse 4s ease-in-out infinite;
+  z-index:0;
+}
+.pg-close{padding:44px 24px;text-align:center;}
+/* .pg-close * {
+  position:relative;
+  z-index:1;
+} */
+.close-q{font-family:'Playfair Display',serif;font-style:italic;font-size:19px;line-height:1.65;margin-bottom:8px;white-space:pre-line;}
+.htag-box{margin-top:22px;padding:14px 20px;border-radius:12px;border-width:1.5px;border-style:dashed;}
+
+/* CORNER DECO */
+.corner-svg{position:absolute;width:38px;height:38px;opacity:0.4;}
+
+/* NAV */
+.nav-wrap{padding:12px 0 4px;background:transparent;}
+.nav-dots{display:flex;justify-content:center;gap:5px;padding:8px 0 4px;flex-wrap:wrap;}
+.ndot{width:7px;height:7px;border-radius:50%;cursor:pointer;border:none;transition:all 0.25s;}
+.btn-row{display:flex;justify-content:space-between;align-items:center;padding:8px 16px 0;}
+.nbtn{background:none;border-width:1.5px;border-style:solid;border-radius:20px;padding:6px 18px;font-family:'Cormorant Garamond',serif;font-size:13px;cursor:pointer;transition:all 0.2s;}
+.pctr{font-size:11.5px;opacity:0.6;}
+</style>
+</head>
+<body>
+<div class="cw" id="app"></div>
+
+<!-- ⚠️ ONLY SHOWING UPDATED CORE PARTS — REST SAME AS YOUR FILE -->
+
+<!-- ================== ADD THIS CSS ================== -->
+<style>
+/* ===== TIMELINE (PAGE 3) ===== */
+.timeline {
+  position: relative;
+  margin-top: 20px;
+  padding-left: 10px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(to bottom, #c8862a, #f5d78a, #c8862a);
+  box-shadow: 0 0 10px rgba(200,134,42,0.4);
+  opacity: 0.3;
+}
+
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: 10px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: radial-gradient(circle,#f5d78a,#c8862a);
+  box-shadow: 0 0 12px rgba(200,134,42,0.7);
+}
+
+.close-card {
+  background: linear-gradient(145deg,#fff3d0,#f5d6a0);
+  border-radius: 20px;
+  padding: 20px 16px;
+  margin: 18px auto;
+
+  box-shadow: 
+    0 20px 40px rgba(0,0,0,0.2),
+    0 0 30px rgba(255,215,0,0.25);
+
+  width: 85%;
+  max-width: 320px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.close-text {
+  margin-top: 12px;
+  font-size: 13px;
+  color: #5a2a00;
+  font-style: italic;
+  line-height: 1.7;
+}
+
+.timeline-card {
+
+  width: calc(100% - 10px);
+  margin-left: 10px;   /* increase from 10px */
+}
+</style>
+
+<script>
+/* ---- Build pages from CONFIG ---- */
+function hex(c){return c;}
+
+function buildCard(){
+  const C = CONFIG;
+  const app = document.getElementById('app');
+
+  /* helper */
+  const el=(tag,cls,html)=>{const e=document.createElement(tag);if(cls)e.className=cls;if(html)e.innerHTML=html;return e;};
+  const div=(cls,html)=>el('div',cls,html);
+
+  /* ===== PAGE 0: COVER ===== */
+  const cover = div('pg pg-cover');
+  cover.style.background = C.bgGradient;
+  cover.id='p0';
+
+  // petals
+  const petalsDiv=div('cover-petals');
+  petalsDiv.id='petals';
+  cover.appendChild(petalsDiv);
+
+  cover.appendChild(div('bf'));
+
+  // swastik left
+  cover.innerHTML += `
+    <div class="ganesh-wrap">
+  <img 
+    src="file:///Users/muskanjhunjhunwala/Downloads/images/ChatGPT%20Image%20Mar%2025,%202026,%2006_05_03%20PM.png" 
+    alt="Ganesh Ji" 
+    class="ganesh-img"
+  />
+</div>
+    <div class="om-text">ॐ गं गणपतये नमः</div>
+    <div class="swastik-row">
+      <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M14 4L14 14L24 14" stroke="${C.accentGold}" stroke-width="2.5" stroke-linecap="round"/><path d="M14 14L14 24" stroke="${C.accentGold}" stroke-width="2.5" stroke-linecap="round"/><path d="M4 14L14 14" stroke="${C.accentGold}" stroke-width="2.5" stroke-linecap="round"/><path d="M14 4L4 4" stroke="${C.accentGold}" stroke-width="2.5" stroke-linecap="round"/><path d="M24 14L24 24" stroke="${C.accentGold}" stroke-width="2.5" stroke-linecap="round"/><path d="M4 14L4 4" stroke="${C.accentGold}" stroke-width="2.5" stroke-linecap="round"/><path d="M24 14L24 4" stroke="${C.accentGold}" stroke-width="2.5" stroke-linecap="round"/><path d="M4 24L4 14" stroke="${C.accentGold}" stroke-width="2.5" stroke-linecap="round"/><path d="M14 24L24 24" stroke="${C.accentGold}" stroke-width="2.5" stroke-linecap="round"/></svg>
+      <div style="font-size:22px;color:${C.accentGold};font-family:'Playfair Display',serif;font-style:italic;">${C.weddingTagline}</div>
+      <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M14 4L14 14L4 14" stroke="${C.accentGold}" stroke-width="2.5" stroke-linecap="round"/><path d="M14 14L14 24" stroke="${C.accentGold}" stroke-width="2.5" stroke-linecap="round"/><path d="M24 14L14 14" stroke="${C.accentGold}" stroke-width="2.5" stroke-linecap="round"/><path d="M14 4L24 4" stroke="${C.accentGold}" stroke-width="2.5" stroke-linecap="round"/><path d="M4 14L4 4" stroke="${C.accentGold}" stroke-width="2.5" stroke-linecap="round"/><path d="M24 14L24 24" stroke="${C.accentGold}" stroke-width="2.5" stroke-linecap="round"/><path d="M14 24L4 24" stroke="${C.accentGold}" stroke-width="2.5" stroke-linecap="round"/><path d="M24 14L24 4" stroke="${C.accentGold}" stroke-width="2.5" stroke-linecap="round"/></svg>
+    </div>
+    <div class="divr" style="background:linear-gradient(to right,transparent,${C.accentGold},transparent);"></div>
+   <div class="cartoon-wrap">
+  <img 
+    src="file:///Users/muskanjhunjhunwala/Downloads/images/ChatGPT%20Image%20Mar%2025,%202026,%2005_57_19%20PM.png" 
+    alt="Shubham & Shruti"
+    class="couple-img"
+  />
+</div>
+    </div>
+    <div class="cn" style="color:${C.primaryRed};">${C.groomName.split(' ')[0]}<br><span class="amp" style="color:${C.accentGold};">&amp;</span><br>${C.brideName.split(' ')[0]}</div>
+    <div class="divr" style="background:linear-gradient(to right,transparent,${C.accentGold},transparent);margin:12px auto;"></div>
+    <div class="htag" style="color:${C.accentGold};">${C.hashtag}</div>
+    <div class="dv-info" style="color:#5a3010;">
+      <strong style="color:${C.primaryRed};">9th May 2026 · 7:00 PM</strong>
+      ${C.mainVenue}, Begusarai, Bihar<br>
+      <span style="font-size:12.5px;opacity:0.72;">Festivities from 5th May 2026</span>
+    </div>
+    <div class="swipe-hint" style="color:${C.accentGold};">Swipe through to explore →</div>
+  `;
+  app.appendChild(cover);
+
+  /* ===== PAGE 1: INVITE ===== */
+  const inv = div('pg pg-invite page-h');
+  inv.style.background='linear-gradient(150deg,#fffdf5,#fef5e2,#fce8c0)';
+  inv.id='p1';
+  inv.innerHTML=`
+    <div class="bf"></div>
+    <div style="font-size:13px;color:${C.accentGold};letter-spacing:3px;margin-bottom:14px;">✦ शुभ लगन ✦</div>
+  
+    <div class="dadi-img-wrap">
+  <img src="file:///Users/muskanjhunjhunwala/Downloads/images/channels4_profile.jpg" alt="Rani Sati Dadi Maa" class="dadi-img"/>
+</div>
+    <div class="inv-bless" style="color:#7a5030;">With the divine blessings of<br>Shri Rani Sati Dadi Maa</div>
+    <div class="divr" style="background:linear-gradient(to right,transparent,${C.accentGold},transparent);"></div>
+    <div class="inv-fam" style="color:#7a4020;">${C.groomFamily}</div>
+    <div style="font-size:13px;color:#7a5030;margin-bottom:10px;">cordially invites you to the wedding of their beloved son</div>
+    <div class="nm-big" style="color:${C.primaryRed};">${C.groomName}</div>
+    <div class="lineage" style="color:#7a5030;">S/o ${C.groomFatherName} &amp; Smt. ${C.groomMotherName}</div>
+    <div class="with-t" style="color:${C.accentGold};">with</div>
+    <div class="nm-big" style="color:${C.primaryRed};">${C.brideName}</div>
+    <div class="lineage" style="color:#7a5030;">D/o ${C.brideFatherName} &amp; Smt. ${C.brideMotherName}</div>
+    <div class="divr" style="background:linear-gradient(to right,transparent,${C.accentGold},transparent);margin:18px auto;"></div>
+    <div style="font-size:13px;color:#5a3010;line-height:2;font-style:italic;margin-bottom:16px;">
+      📍 Pre-wedding — <strong>${C.preweddingVenue}</strong><br>
+      📍 Main functions — <strong>${C.mainVenue}, Begusarai</strong>
+    </div>
+    <div class="rsvp-box">
+      <div class="rsvp-t" style="color:${C.accentGold};">RSVP &amp; Inquiries</div>
+      <div class="rsvp-c" style="color:#5a3010;">
+        ${C.rsvp1Name} · <a href="tel:${C.rsvp1Phone.replace(/\s/g,'')}" style="color:${C.primaryRed};">${C.rsvp1Phone}</a><br>
+        ${C.rsvp2Name} · <a href="tel:${C.rsvp2Phone.replace(/\s/g,'')}" style="color:${C.primaryRed};">${C.rsvp2Phone}</a>
+      </div>
+    </div>
+  `;
+  app.appendChild(inv);
+
+  /* ===== EVENT PAGES (date-wise) ===== */
+ 
+/* ===== COMBINED PRE-WEDDING PAGE ===== */
+/* ===== REPLACE YOUR ENTIRE PAGE 3 BLOCK WITH THIS ===== */
+
+const comboPage = div('pg pg-date page-h');
+
+// hdr.style.background = ev.bgColor;
+comboPage.id='p2';
+
+comboPage.innerHTML=`
+<div class="date-hdr" style="
+  background: linear-gradient(135deg,#c8862a,#e8c27c,#f5d78a);
+  color:#3a1a0a;
+  box-shadow: 0 8px 25px rgba(200,134,42,0.3);
+">
+  <div class="date-label">Pre-Wedding Celebrations</div>
+  <div class="date-num">5th – 7th May</div>
+  <div class="date-venue-txt">📍 ${C.preweddingVenue}</div>
+</div>
+`;
+
+const timelineWrap = document.createElement("div");
+timelineWrap.className = "timeline";
+
+C.events.slice(0,3).forEach((ev)=>{
+
+  const item = document.createElement("div");
+  item.className = "timeline-item";
+
+  const dayTitle = document.createElement("div");
+  dayTitle.style.marginBottom = "6px";
+  dayTitle.style.fontWeight = "600";
+  dayTitle.style.color = "#8b1a1a";
+  dayTitle.style.fontSize = "13px";
+  dayTitle.style.letterSpacing = "1px";
+  dayTitle.innerHTML = ev.date;
+
+  item.appendChild(dayTitle);
+
+  ev.functions.forEach((fn)=>{
+
+    const card = div('ev-card timeline-card');
+    let nameColor = "white";
+    let textColor = "rgba(255,255,255,0.9)";
+
+    if(fn.name==='Haldaat'){
+  card.style.background=ev.bgColor;
+
+  nameColor = "#3a1a0a";        // dark brown
+  textColor = "#4a2a0a";
+
+} else if(fn.name==='Dadi Mangal Path'){
+  card.style.background='linear-gradient(135deg,#2c0a0a,#5a1010,#8b1a1a)';
+
+  nameColor = "#ffe5e5";        // soft light
+  textColor = "rgba(255,255,255,0.9)";
+
+} else if(fn.name==='Mehendi'){
+  card.style.background='linear-gradient(135deg,#0a3a0a,#1e6e1e,#27ae60)';
+
+  nameColor = "#eaffea";
+  textColor = "rgba(255,255,255,0.9)";
+}
+
+    const dotsHtml = fn.colorDots.map(c=>`<span class="cdot" style="background:${c};"></span>`).join('');
+    const dressHtml = fn.dress.map(d=>`<span class="dtag">${d}</span>`).join('');
+
+    card.innerHTML=`
+      <span class="ev-icon luxury-icon">
+        ${
+          fn.iconType === "image"
+            ? `<img src="${fn.icon}" class="luxury-img" />`
+            : fn.icon
+        }
+      </span>
+      <div class="ev-name" style="color:${nameColor}">${fn.name}</div>
+      <div class="ev-time" style="color:${textColor}">⏰ ${fn.time}</div>
+      <div class="ev-desc" style="color:${textColor}">${fn.desc}</div>
+      <div class="ev-dress-title">Dress${fn.colorTheme?' — '+fn.colorTheme:''}</div>
+      <div class="dress-tags">${dressHtml}</div>
+      ${dotsHtml?`<div class="color-dots">${dotsHtml}</div>`:''}
+    `;
+
+    item.appendChild(card);
+  });
+
+  timelineWrap.appendChild(item);
+});
+
+comboPage.appendChild(timelineWrap);
+app.appendChild(comboPage);
+
+/* ===== REMAINING EVENTS ===== */
+C.events.forEach((ev, ei)=>{
+  if(ei < 3) return;
+
+  const pg = div('pg pg-date page-h');
+  pg.id='p'+(ei);
+
+  // ---- DATE HEADER (same style as page 3) ----
+  const hdrColors = [
+    // 8th May
+    'linear-gradient(135deg,#4a0060,#7b1fa2,#c062e0)',
+    // 9th May
+    'linear-gradient(135deg,#6e0a0a,#a01515,#c0392b)',
+  ];
+  const hdrColor = hdrColors[ei - 3] || ev.bgColor;
+
+  const hdr = div('date-hdr');
+  hdr.style.background = hdrColor;
+  hdr.style.boxShadow = '0 8px 25px rgba(0,0,0,0.25)';
+  hdr.innerHTML = `
+    <div class="date-label">${ev.date}</div>
+    <div class="date-num" style="color:white;">${ev.dayHindi}</div>
+    <div class="date-venue-txt">📍 ${ev.venue}</div>
+  `;
+  pg.appendChild(hdr);
+
+  // ---- TIMELINE WRAP (same as page 3) ----
+  const tlWrap = document.createElement('div');
+  tlWrap.className = 'timeline';
+
+  ev.functions.forEach((fn) => {
+    const item = document.createElement('div');
+    item.className = 'timeline-item';
+
+    // time label above card (like date label on page 3)
+    const timeLabel = document.createElement('div');
+    timeLabel.style.marginBottom = '6px';
+    timeLabel.style.fontWeight = '600';
+    timeLabel.style.fontSize = '13px';
+    timeLabel.style.letterSpacing = '1px';
+    timeLabel.style.color = '#8b1a1a';
+    timeLabel.textContent = fn.name + ' · ' + fn.time;
+    item.appendChild(timeLabel);
+
+    const card = div('ev-card timeline-card');
+
+    let nameColor = 'white';
+    let textColor = 'rgba(255,255,255,0.92)';
+
+    /* 🎁 BHAAT — CHUNARI BANDHANI */
+    if(fn.name === 'Bhaat'){
+      card.style.background = `
+        radial-gradient(circle at 20% 20%, rgba(255,255,255,0.15), transparent 40%),
+        linear-gradient(135deg,#8b0000,#c0392b,#e74c3c)
+      `;
+      nameColor = '#fff0e6';
+      textColor = 'rgba(255,255,255,0.92)';
+
+      // bandhani dots overlay
+      const pat = document.createElement('div');
+      pat.style.cssText = `position:absolute;inset:0;background-image:radial-gradient(white 1px,transparent 1px);background-size:14px 14px;opacity:0.15;pointer-events:none;`;
+      card.appendChild(pat);
+    }
+
+    /* 💍 ENGAGEMENT — LUXURY SPARKLE */
+    else if(fn.name === 'Engagement'){
+      card.style.background = `linear-gradient(135deg,#1a1a2e,#3a0ca3,#7209b7)`;
+      nameColor = '#f5e6ff';
+      textColor = 'rgba(255,255,255,0.95)';
+
+      const sparkle = document.createElement('div');
+      sparkle.style.cssText = `position:absolute;inset:0;background:radial-gradient(circle,rgba(255,255,255,0.2) 1px,transparent 1px);background-size:20px 20px;opacity:0.15;animation:sparkleMove 12s linear infinite;pointer-events:none;`;
+      card.appendChild(sparkle);
+    }
+
+    /* 🎶 SANGEET — DISCO */
+    else if(fn.name === 'Sangeet'){
+      card.style.background = `linear-gradient(135deg,#000428,#004e92,#0077b6)`;
+      nameColor = '#e0f7ff';
+      textColor = 'rgba(255,255,255,0.95)';
+
+      for(let i = 0; i < 5; i++){
+        const orb = document.createElement('div');
+        orb.className = 'disco-orb';
+        orb.style.cssText = `width:70px;height:70px;background:radial-gradient(circle,rgba(255,255,255,0.25),transparent);top:${Math.random()*100}%;left:${Math.random()*100}%;animation:discorot ${6+Math.random()*6}s linear infinite;`;
+        card.appendChild(orb);
+      }
+    }
+
+    /* 🌼 HALDI */
+    else if(fn.name === 'Haldi'){
+      card.style.background = `linear-gradient(135deg,#08203a,#0d3060,#1a5276,#2471a3)`;
+      nameColor = '#e0f4ff';
+      textColor = 'rgba(255,255,255,0.92)';
+    }
+
+    /* 🌺 VARMALA & PHERAS */
+    else if(fn.name === 'Varmala & Pheras'){
+      card.style.background = `linear-gradient(135deg,#3a0808,#6e1010,#921a1a,#b52828)`;
+      nameColor = '#ffe0e0';
+      textColor = 'rgba(255,255,255,0.92)';
+    }
+
+    const dotsHtml = (fn.colorDots || []).filter(Boolean).map(c =>
+      `<span class="cdot" style="background:${c};"></span>`
+    ).join('');
+
+    const dressHtml = fn.dress.map(d => `<span class="dtag">${d}</span>`).join('');
+
+    card.innerHTML += `
+      <span class="ev-icon luxury-icon">
+        ${fn.iconType === 'image'
+          ? `<img src="${fn.icon}" class="luxury-img" />`
+          : fn.icon}
+      </span>
+      <div class="ev-name" style="color:${nameColor};">${fn.name}</div>
+      <div class="ev-time" style="color:${textColor};">⏰ ${fn.time}</div>
+      <div class="ev-desc" style="color:${textColor};">${fn.desc}</div>
+      <div class="ev-dress-title">Dress${fn.colorTheme ? ' — ' + fn.colorTheme : ''}</div>
+      <div class="dress-tags">${dressHtml}</div>
+      ${dotsHtml ? `<div class="color-dots">${dotsHtml}</div>` : ''}
+    `;
+
+    item.appendChild(card);
+    tlWrap.appendChild(item);
+  });
+
+  pg.appendChild(tlWrap);
+  app.appendChild(pg);
+});
+  /* ===== PAGE 7: TRAVEL ===== */
+  const tr=div('pg pg-travel page-h');
+  tr.style.background='linear-gradient(155deg,#e8f4f8,#d5e8f5,#c0d8f0)';
+  tr.id='p5';
+  tr.innerHTML=`
+    <div style="font-family:'Playfair Display',serif;font-size:26px;color:#1a3a5c;text-align:center;margin-bottom:5px;">🗺️ कैसे पहुंचें?</div>
+    <div style="font-size:13px;color:#3a6a9a;text-align:center;font-style:italic;margin-bottom:18px;">How to reach — we'll make it easy!</div>
+    <div class="venue-c" style="background:linear-gradient(135deg,#1a3a5c,#2471a3);">
+      <div class="vc-lbl">📍 Main Venue (8th–9th May)</div>
+      <div class="vc-nm">${C.mainVenue}</div>
+      <div class="vc-addr">${C.mainVenueAddress}</div>
+      <a class="map-btn" style="color:#1a3a5c;" href="${C.mainVenueMapsURL}" target="_blank">📍 Open in Maps</a>
+    </div>
+    <div class="venue-c" style="background:linear-gradient(135deg,#1a4a1a,#2d7a2d);">
+      <div class="vc-lbl">📍 Pre-wedding (5th–7th May)</div>
+      <div class="vc-nm">Patel Chowk, Krishna Colony</div>
+      <div class="vc-addr">Begusarai, Bihar</div>
+      <a class="map-btn" style="color:#1a4a1a;" href="${C.preweddingMapsURL}" target="_blank">📍 Open in Maps</a>
+    </div>
+    <div class="tcard"><div class="tmode">✈️ By Air</div><div class="tdet">${C.airportInfo}</div></div>
+    <div class="tcard"><div class="tmode">🚂 By Train</div><div class="tdet">${C.trainInfo}</div></div>
+    <div class="tcard"><div class="tmode">🚗 By Road</div><div class="tdet">${C.roadInfo}</div></div>
+    <div style="text-align:center;margin-top:12px;font-size:12.5px;color:#3a6a9a;font-style:italic;line-height:1.8;">
+      आप एवं आपके समस्त परिवार की स्नेहमयी उपस्थिति एवं आशीर्वाद की कामना है।<br>
+      Contact: <a href="tel:${C.rsvp1Phone.replace(/\s/g,'')}" style="color:#1a5276;font-weight:600;">${C.rsvp1Phone}</a>
+    </div>
+  `;
+  app.appendChild(tr);
+
+  /* ===== PAGE 8: CLOSING ===== */
+  const cl=div('pg pg-close page-h');
+  cl.style.background=C.bgGradient;
+
+  cl.id='p6';
+  cl.innerHTML=`
+    <svg class="corner-svg" style="top:14px;left:14px;" viewBox="0 0 40 40" fill="none"><path d="M2 38 Q2 2 38 2" stroke="${C.accentGold}" stroke-width="1.5" fill="none"/><circle cx="2" cy="38" r="2" fill="${C.accentGold}"/><circle cx="38" cy="2" r="2" fill="${C.accentGold}"/></svg>
+    <svg class="corner-svg" style="bottom:14px;right:14px;transform:scale(-1);" viewBox="0 0 40 40" fill="none"><path d="M2 38 Q2 2 38 2" stroke="${C.accentGold}" stroke-width="1.5" fill="none"/><circle cx="2" cy="38" r="2" fill="${C.accentGold}"/><circle cx="38" cy="2" r="2" fill="${C.accentGold}"/></svg>
+    <div style="font-size:42px;margin-bottom:16px;">🌸</div>
+    
+    <div class="divr" style="background:linear-gradient(to right,transparent,${C.accentGold},transparent);margin:16px auto;"></div>
+    <div class="close-sk" style="font-size:14px;color:${C.accentGold};letter-spacing:2px;margin-bottom:4px;">${C.closingSanskrit}</div>
+    <div style="font-size:11.5px;color:${C.accentGold};opacity:0.7;margin-bottom:14px;letter-spacing:1px;font-style:italic;">${C.closingTranslation}</div>
+
+    <div class="cartoon-wrapp">
+  <img 
+    src="file:///Users/muskanjhunjhunwala/Downloads/images/ChatGPT%20Image%20Mar%2025,%202026,%2011_00_35%20PM.png" 
+    class="couple-img"
+  />
+
+  <div class="close-text">
+    ${C.closingWish}
+  </div>
+</div>
+    
+    <div class="htag-box" style="background:rgba(139,26,26,0.08);border-color:rgba(139,26,26,0.28);">
+      <div style="font-family:'Playfair Display',serif;font-size:22px;color:${C.primaryRed};font-style:italic;">${C.hashtag}</div>
+      <div style="font-size:12px;color:${C.accentGold};margin-top:4px;">Tag us in your beautiful moments! 📸</div>
+    </div>
+    <div style="margin-top:18px;font-size:12.5px;color:${C.accentGold};font-style:italic;">🙏 जय राणी सती दादी माँ 🔱</div>
+  `;
+  app.appendChild(cl);
+
+  /* ===== NAV ===== */
+  const tot = 7;
+  const navWrap=div('nav-wrap');
+  navWrap.innerHTML=`
+    <div class="btn-row">
+      <button class="nbtn" id="bp" onclick="nav(-1)" style="border-color:rgba(139,26,26,0.3);color:${CONFIG.primaryRed};">← Prev</button>
+      <span class="pctr" id="pctr" style="color:${CONFIG.accentGold};">1 / ${tot}</span>
+      <button class="nbtn" id="bn" onclick="nav(1)" style="border-color:rgba(139,26,26,0.3);color:${CONFIG.primaryRed};">Next →</button>
+    </div>
+    <div class="nav-dots" id="ndots"></div>
+  `;
+  app.appendChild(navWrap);
+
+  // dots
+  const ndots=document.getElementById('ndots');
+  for(let i=0;i<tot;i++){
+    const d=document.createElement('button');
+    d.className='ndot'+(i===0?' active':'');
+    d.style.background=i===0?C.primaryRed:'rgba(139,26,26,0.2)';
+    d.setAttribute('data-i',i);
+    d.onclick=(x=>()=>goTo(x))(i);
+    ndots.appendChild(d);
+  }
+
+  // petals
+  const pc=document.getElementById('petals');
+
+ 
+
+  
+ 
+
+for(let i=0;i<20;i++){
+  const p=document.createElement('div');
+  p.className='petal';
+  p.textContent=emj[i%emj.length];
+  p.style.left=Math.random()*100+'%';
+  p.style.animationDuration=(5+Math.random()*8)+'s';
+  p.style.animationDelay=(Math.random()*7)+'s';
+  p.style.fontSize=(10+Math.random()*10)+'px';
+  p.style.opacity = 0.8;
+  pc.appendChild(p);
+}
+}
+
+/* ===== NAVIGATION ===== */
+let cur=0, tot=7;
+function goTo(n){
+  document.getElementById('p'+cur).classList.add('page-h');
+  const dots=document.querySelectorAll('.ndot');
+  dots[cur].classList.remove('active');
+  dots[cur].style.background='rgba(139,26,26,0.2)';
+  cur=n;
+  document.getElementById('p'+cur).classList.remove('page-h');
+  dots[cur].classList.add('active');
+  dots[cur].style.background=CONFIG.primaryRed;
+  document.getElementById('pctr').textContent=(cur+1)+' / '+tot;
+  document.getElementById('bp').style.visibility=cur===0?'hidden':'visible';
+  document.getElementById('bn').style.visibility=cur===tot-1?'hidden':'visible';
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function nav(d){if(cur+d>=0&&cur+d<tot)goTo(cur+d);}
+
+/* disco animation */
+document.head.insertAdjacentHTML('beforeend',`<style>@keyframes discorot{from{transform:rotate(0deg) translate(50px)}to{transform:rotate(360deg) translate(50px)}}</style>`);
+
+buildCard();
+goTo(0);
+</script>
+</body>
+</html>
